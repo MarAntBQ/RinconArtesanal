@@ -1,0 +1,92 @@
+/*Main Slider for Pictures Show*/
+.slide {
+    text-align: center;
+    padding: 120px 10px;
+    color: white;
+    background-image: url("../img/slide/slide1.jpg");
+    background-repeat: no-repeat;
+    //background-attachment: fixed;
+    background-position-y: center;
+    background-size: 100%;
+    //opacity: 0.5;
+    
+    @media (max-width: $break-small) {
+        padding: 90px 10px;
+    }
+    
+    @media (max-width: 400px) {
+        padding: 80px 10px;
+    }
+    
+    @media (max-width: 350px) {
+        padding: 60px 10px;
+    }
+    
+    animation: 120s cambiarimgslider linear infinite;
+    
+    @keyframes cambiarimgslider {
+        0% {
+            background-image: url("../img/slide/slide1.jpg");
+        }
+        
+        15% {
+            filter: blur(1px);
+        }
+        
+        20% {
+            filter: blur(0px);
+            background-image: url("../img/slide/slide1.jpg");
+            background-image: url("../img/slide/slide2.jpg");
+        }
+        
+        35% {
+            filter: blur(1px);
+        }
+        
+        40% {
+            filter: blur(0px);
+            background-image: url("../img/slide/slide2.jpg");
+            background-image: url("../img/slide/slide3.jpg");
+        }
+        
+        55% {
+            filter: blur(1px);
+        }
+        
+        60% {
+            filter: blur(0px);
+            background-image: url("../img/slide/slide3.jpg");
+            background-image: url("../img/slide/slide4.jpg");
+        }
+        
+        75% {
+            filter: blur(1px);
+        }
+        
+        80% {
+            filter: blur(0px);
+            background-image: url("../img/slide/slide4.jpg");
+            background-image: url("../img/slide/slide5.jpg");
+        }
+        
+        95% {
+            filter: blur(1px);
+        }
+        
+        100% {
+            filter: blur(0px);
+            background-image: url("../img/slide/slide5.jpg");
+            background-image: url("../img/slide/slide1.jpg");
+        }
+    }
+
+    h1 {
+        margin-bottom: 20px;
+    }
+    
+    h1, h3 {
+        padding: 5px;
+        background: rgba(0, 0, 0, 0.74);
+        border-radius: 5px;
+    }
+}
